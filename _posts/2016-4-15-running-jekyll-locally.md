@@ -3,7 +3,7 @@ layout: post
 title: Running Jekyll Locally
 ---
 
-If I want to use Jekyll's built-in developmetn server which will allow me to preview what the generated site will look like in my browser locally, I can run:
+If I want to use Jekyll's built-in development server which will allow me to preview what the generated site will look like in my browser locally, I can run:
 
 ```
 $ jekyll serve
