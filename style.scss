@@ -33,10 +33,6 @@ body {
   width: 100%;
 }
 
-section {
-	height: 100%;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
   color: $darkerGray;
@@ -218,6 +214,9 @@ img {
 }
 
 nav {
+  	z-index: 500;
+	position: fixed;
+	width: 100%;
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
@@ -244,16 +243,29 @@ nav {
   }
 }
 
-//
-// Section Cover 
-// #section-cover
-
-#section-cover {
-	.container {
-		background: $blue;	
-	}
+main {
+	height: 100%;
+	width: 100%;
+	position: absolute;
 }
 
+//
+// Sections
+
+section {
+	position: relative;
+	overflow: hidden;
+	
+	&.feature {
+		height: 100%;
+		width: 100%;
+		padding: 0;
+	}
+	
+	&#section-cover {
+		background: $blue;
+	}
+}
 //
 // .main
 //
