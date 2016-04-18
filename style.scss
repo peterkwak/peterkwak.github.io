@@ -217,8 +217,8 @@ nav {
   	z-index: 500;
 	position: fixed;
 	width: 100%;
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+
+ background: #fff;
   font-family: $helveticaNeue;
   font-size: 18px;
 
@@ -232,7 +232,7 @@ nav {
   a {
     margin-left: 20px;
     color: $darkGray;
-    text-align: right;
+    float: right;
     font-weight: 300;
     letter-spacing: 1px;
 
