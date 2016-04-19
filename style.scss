@@ -245,13 +245,11 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
-    font-weight: 300;
-    letter-spacing: 1px;
+    color: $lightestBlue;
 
     @include mobile {
       margin: 0 10px;
-      color: $blue;
+      color: $lightestBlue;
     }
   }
 }
