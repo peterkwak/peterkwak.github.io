@@ -260,7 +260,11 @@ main {
 	position: absolute;
 	
 	section:nth-child(2n+1) {
-    		background: #4183C4;
+    		background: $blue;
+	}
+	
+	section:nth-child(2n) {
+		background: $darkerBlue;
 	}
 }
 
