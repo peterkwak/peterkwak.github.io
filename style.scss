@@ -225,12 +225,15 @@ img {
   }
 }
 
-nav {
-  	z-index: 500;
+.nav {
+	float: right;
+	z-index: 500;
 	position: fixed;
 	width: 100%;
+}
 
- background: #fff;
+nav {
+   float: right;
   font-family: $helveticaNeue;
   font-size: 18px;
 
