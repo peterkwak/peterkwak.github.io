@@ -168,6 +168,9 @@ img {
 .site-avatar {
   width: 50px;
   height: 50px;
+  background: url('/images/ic_face_white_48px.svg');
+  display: inline-block;
+  vertical-align: middle;
 
   @include mobile {
     float: none;
@@ -186,6 +189,26 @@ img {
   z-index: 500;
   position: fixed;
   width: 100%;
+  padding: 10px 0;
+
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+
+  &.affix {
+    background: $lightestBlue;
+    padding: 0;
+
+    a {
+      color: $blue;
+    }
+
+    .site-avatar {
+      background: url('/images/ic_face_black_48px.svg');
+    }
+  }
 }
 
 nav {

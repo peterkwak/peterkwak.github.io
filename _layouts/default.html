@@ -19,12 +19,12 @@
 
   </head>
 
-  <body>
-    <div class="nav">
+  <body data-spy="scroll" data-target=".nav">
+    <div class="nav" data-spy="affix" data-offset-top="60">
       <nav>
         <a href="#work">Work</a>
         <a href="#about">About</a>
-        <a href="#" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+        <a href="#" class="site-avatar animated rotateIn"></a>
         <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -82,11 +82,17 @@
       </div>
     </main>
     
-   
+    
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      var $j = jQuery.noConflict();
+
+
+    </script>
     {% include analytics.html %}
   </body>
 </html>
