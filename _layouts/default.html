@@ -8,6 +8,11 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+       <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/animate.min.css">
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
@@ -26,9 +31,9 @@
     </div>
     <main id="sections" role="main">
       <section id="section-cover" class="feature">
-          <div class="title">
-            <h1 class="site-name">{{ site.name }}</h1>
-            <!--<p class="site-description">{{ site.description }}</p>-->
+          <div class="title animated bounceInDown">
+            <h1>{{ site.name }}</h1>
+            <h2>{{ site.description }}</h2>
           </div>  
       </section>
       
@@ -77,34 +82,11 @@
       </div>
     </main>
     
-    
-    
-    <!--<div class="wrapper-masthead">-->
-    <!--  <div class="container">-->
-    <!--    <header class="masthead clearfix">-->
-    <!--      <nav>-->
-    <!--        <a href="{{ site.baseurl }}/">Blog</a>-->
-    <!--        <a href="{{ site.baseurl }}/about">About</a>-->
-    <!--      </nav>-->
-    <!--    </header>-->
-    <!--  </div>-->
-    <!--</div>-->
-    <!--<section id="section-cover">-->
-    <!--  <div class="container">-->
-    <!--    <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>-->
-  
-    <!--    <div class="site-info">-->
-    <!--      <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>-->
-    <!--      <p class="site-description">{{ site.description }}</p>-->
-    <!--    </div>-->
-    <!--  </div>-->
-    <!--</section>-->
-    <!--<div id="main" role="main" class="container">-->
-    <!--  {{ content }}-->
-    <!--</div>-->
-
    
-
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     {% include analytics.html %}
   </body>
 </html>
