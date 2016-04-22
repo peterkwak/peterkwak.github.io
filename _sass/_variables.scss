@@ -1,5 +1,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,900,300,500);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 // VARIABLES
 //
@@ -26,10 +27,11 @@ $roboto: Roboto, Helvetica Neue, Arial, sans-serif;
 $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
+$montserrat: Montserrat, Helvetica, Arial, sans-serif;
 
 // Mobile breakpoints
 @mixin mobile {
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 767px) {
     @content;
   }
 }

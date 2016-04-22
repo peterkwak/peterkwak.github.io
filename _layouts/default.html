@@ -19,8 +19,31 @@
 
   </head>
 
-  <body data-spy="scroll" data-target=".nav">
-    <div class="nav" data-spy="affix" data-offset-top="60">
+  <body data-spy="scroll" data-target=".navbar">
+    <nav class="navbar navbar-fixed-top" data-spy="affix" data-offset-top="60" role="navigation">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">    
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      </div>  
+      <div id="navigation" class="container">
+
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav"> 
+            <li class><a href="#work">Work</a></li> 
+            <li class><a href="#resume">Resume</a></li> 
+            <li class="avatar animated active"> <a href="#" class="site-avatar animated rotateIn"></a></li> 
+            <li class><a href="#about">About</a></li> 
+            <li class><a href="#contact">Contact</a></li> 
+          </ul>
+        </div>         
+      </div>
+    </nav>
+
+    <!-- <div class="nav" data-spy="affix" data-offset-top="60">
       <nav>
         <a href="#work">Work</a>
         <a href="#about">About</a>
@@ -28,7 +51,7 @@
         <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
       </nav>
-    </div>
+    </div> -->
     <main id="sections" role="main">
       <section id="section-cover" class="feature">
           <div class="title animated fadeIn">
@@ -50,8 +73,121 @@
       </section>
       
       <section id="resume">
-        <h3>Resume</h3>
-        <p>Link to resume</p>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 headline wow bounceInDown animated">
+              <h2>Resume</h2>
+              <p>My experience and education.</p>
+            </div>
+
+          </div><!-- .row -->
+
+         
+
+          <div class="row resume-items">
+
+            <div class="col-md-3 wow bounceInLeft animated">
+              <h3>Experience</h3>
+            </div>
+
+            <div class="col-md-6 col-sm-8 resume-item wow bounceInUp animated">
+              <h4>Front-end Developer</h4>
+              
+              <ul>
+                <li>Developed responsive and functional user interface prototypes based on business requirements for MyFonts.com, the world’s largest font distributor and a high traffic eCommerce site visited by millions of people every month</li>
+                <li>Subscribed to modern workflows including automation via Grunt, preprocessing via SASS, and version control via Git</li>
+                <li>Worked alongside design, QA, and business teams using an iterative process to ensure fully satisfying all requirements and expectations </li>
+              </ul>  
+            
+              <hr class="hidden-xs">
+            </div>
+
+            <div class="col-md-3 col-sm-4 resume-place wow bounceInRight animated">
+              <h4><i class="fa fa-suitcase"></i>MyFonts</h4>
+              <i class="fa fa-calendar"></i> 2014 - Current
+              <hr class="visible-xs">
+            </div>
+
+            <div class="col-md-6 col-md-offset-3 col-sm-8 resume-item wow bounceInUp animated" >
+              <h4>Associate Engineer</h4>
+              <ul>
+                <li>
+                Managed client SharePoint services by monitoring the health of the environment, managing software patches and updates, configuring software as services are deployed and enhanced, managing user accounts, and providing guidance on platform adoption
+                </li>
+              </ul>
+              <hr class="hidden-xs">
+            </div>
+
+            <div class="col-md-3 col-sm-4 resume-place wow bounceInRight animated">
+              <h4><i class="fa fa-suitcase"></i>BlueMetal Architects</h4>
+              <i class="fa fa-calendar"></i> 2014 - 2014
+              <hr class="visible-xs">
+            </div>
+
+             <div class="col-md-6 col-md-offset-3 col-sm-8 resume-item wow bounceInUp animated" >
+              <h4>Associate Consultant</h4>
+              <ul>
+                <li>Developed SharePoint Intranets using custom web parts and scripts</li>
+                <li>Setup and configured SharePoint farms and web applications</li>
+                <li>Migrated existing SharePoint, Office and file share environments to Office 365 using best practices and well-documented technical approaches</li>
+                <li>Executed test plans to ensure solution reliability and functionality</li>
+              </ul>  
+              <hr class="hidden-xs">
+            </div>
+
+             <div class="col-md-3 col-sm-4 resume-place wow bounceInRight animated">
+              <h4><i class="fa fa-suitcase"></i>Jornata</h4>
+              <i class="fa fa-calendar"></i> 2013 - 2014
+              <hr class="visible-xs">
+            </div>
+
+            <div class="col-md-6 col-md-offset-3 col-sm-8 resume-item wow bounceInUp animated" >
+              <h4>Web Designer/Developer</h4>
+              <ul>
+                <li>Managed multitude of responsibilities including design, custom WordPress development, SEO, migration, administration, and maintenance</li>
+                <li>Increased unique pageviews per month using proper SEO strategies to over 80k/month (close to 300% increase)</li>
+                <li>Optimized website backend using caching and code optimization</li>
+                <li>Utilized HTML, CSS, PHP, and jQuery in updating and maintaining the design, code, and implementing new page layouts</li>
+              </ul>
+              <hr class="hidden-xs">
+            </div>
+
+             <div class="col-md-3 col-sm-4 resume-place wow bounceInRight animated">
+              <h4><i class="fa fa-suitcase"></i>Massachusetts Electronic Dance Community</h4>
+              <i class="fa fa-calendar"></i> 2013 - 2016
+              <hr class="visible-xs">
+            </div>
+
+          </div><!-- .row -->
+
+           <div class="row resume-items">
+
+            <div class="col-md-3 wow bounceInLeft animated">
+              <h3>Education</h3>
+            </div>
+
+            <div class="col-md-6 col-sm-8 resume-item wow bounceInUp animated">
+              <h4>Management Information Systems</h4>
+              <p>Related courses: C++ Programming, Java Programming, Database Management, Information Systems Analysis, Object Oriented System Design, Enterprise Resource Management</p>
+              <hr class="hidden-xs">
+            </div>
+
+            <div class="col-md-3 col-sm-4 resume-place wow bounceInRight animated">
+              <h4><i class="fa fa-suitcase"></i>Pennsylvania State University</h4>
+              <i class="fa fa-calendar"></i> Graduated 2011
+              <hr class="visible-xs">
+            </div>
+
+          </div><!-- .row -->
+          <div class="row">
+
+            <div class="col-md-6 col-md-offset-3 wow bounceInUp animated">
+              <a href="#" class="btn btn-default btn-custom-2"><i class="fa fa-cloud-download icon-before"></i> Download CV</a>
+            </div>
+
+          </div><!-- .row -->
+
+        </div>
       </section>
       
       <section id="about">
@@ -82,6 +218,7 @@
     <script type="text/javascript">
       var $j = jQuery.noConflict();
 
+      $j('body').scrollspy({ target: '#navigation' });
 
     </script>
     {% include analytics.html %}

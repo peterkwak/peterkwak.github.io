@@ -30,7 +30,6 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 10px;
-  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -166,9 +165,8 @@ img {
 }
 
 .site-avatar {
-  width: 50px;
   height: 50px;
-  background: url('/images/ic_face_white_48px.svg');
+  background: url('/images/ic_face_white_48px.svg') no-repeat 50% 50%;
   display: inline-block;
   vertical-align: middle;
 
@@ -183,7 +181,7 @@ img {
     vertical-align: middle;
   }
 }
-
+/*
 .nav {
   float: right;
   z-index: 500;
@@ -235,6 +233,151 @@ nav {
     }
   }
 }
+*/
+
+nav {
+
+  .navbar-header {
+    .navbar-toggle {
+      border-color: #ddd;
+      .icon-bar {
+        background-color: #888;
+      }
+    }
+  }
+  .container {
+    margin: 0 auto;
+    width: 500px;
+    font-family: inherit;
+    font-size: 18px;
+    text-align: center;
+    padding: 0;
+
+    .nav {
+      li {
+        width: 100px;
+        padding: 15px 15px;
+
+        @include mobile {
+          padding: 0;
+          width: 100%;
+          border-bottom: 2px solid $blue;
+        }
+
+        &.active:not(.avatar) {
+          background-color: $blue;
+          color: $lightestBlue;
+          -moz-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+          -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+          box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+
+          a {
+            color: inherit;
+          }
+        }
+
+        &.avatar {
+          @include mobile {
+            display: none;
+          }
+          &:hover {
+            -webkit-animation-name: pulse;
+            animation-name: pulse;
+      
+          }
+          a {
+            &:focus, &:hover {
+              border: 0;
+            }
+          }
+        }
+
+        a {
+          width: auto;
+          padding: 15px 0;
+
+          &:focus, &:hover {
+            background-color: transparent;
+            color: $lightestBlue;
+            border-bottom: 3px solid $lightestBlue;
+          }
+
+            @include mobile {
+              color: $blue;
+              background-color: $lightestBlue;
+              &:focus, &:hover { 
+                color: $blue;
+                border: 0; 
+            }
+          }
+        }
+      &.active {
+        a {
+            &:focus, &:hover {
+            border: 0;
+          }
+        }
+      }
+
+      }
+    }
+  }
+
+  &.navbar-fixed-top {
+    border: 0;
+  }
+
+  @include mobile {
+    background: #E9F2FC;
+  }
+
+
+
+  &.affix {
+    background: $lightestBlue;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+
+    a {
+      color: $blue;
+    }
+
+    .nav {
+      li {
+        padding: 0px 15px;
+
+        &:not(.avatar):not(.active) {
+          &:focus, &:hover {
+            background-color: $blue;
+            color: $lightestBlue;
+            moz-box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+            -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+            box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+
+            a { color: inherit; }
+          }
+
+          a {
+            &:focus, &:hover {
+              border: 0;
+            }
+          }
+        } 
+      }
+    }
+
+    .site-avatar {
+      background: url('/images/ic_face_black_48px.svg') no-repeat 50% 50%;
+    }
+  }
+}
+
 
 .title {
 	position: absolute;
@@ -285,7 +428,7 @@ nav {
 main {
 	height: 100%;
 	width: 100%;
-	position: absolute;
+	position: relative;
 	
 	section:nth-child(2n+1) {
     		background: $blue;
@@ -304,12 +447,44 @@ section {
 	overflow: hidden;
 	min-height: 700px;
 	text-align: center;
+  padding: 120px 0;
+  font-family: $montserrat;
+
+  h3 {
+    font-family: $montserrat; 
+    color: $lighterBlue;
+  }
+
+  p {
+    color: $lightestBlue;
+  }
 	
 	&.feature {
 		height: 100%;
 		width: 100%;
 		padding: 0;
 	}
+}
+
+.headline {
+  
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+}
+
+.resume-item {
+  ul, p {
+    text-align: left;
+    color: $lightestBlue;
+    font-family: $roboto;
+    font-size: 16px;
+  }
+}
+
+.resume-place {
+  color: $lightestBlue;
 }
 //
 // .main
