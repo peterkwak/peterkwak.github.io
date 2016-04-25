@@ -35,7 +35,7 @@
           <ul class="nav navbar-nav"> 
             <li class><a href="#work">Work</a></li> 
             <li class><a href="#resume">Resume</a></li> 
-            <li class="avatar animated active"> <a href="#" class="site-avatar animated rotateIn"></a></li> 
+            <li class="avatar animated active"> <a href="#section-cover" class="site-avatar animated rotateIn"></a></li> 
             <li class><a href="#about">About</a></li> 
             <li class><a href="#contact">Contact</a></li> 
           </ul>
@@ -231,30 +231,49 @@
     <!-- Smooth scroll -->
     <script src="{{ site.baseurl }}/js/smoothscroll.js"></script>
     <script type="text/javascript">
+      
       var $j = jQuery.noConflict();
-
-      $j('body').scrollspy({ target: '#navigation' });
-      
-      
-      // Add smooth scrolling to all links inside a navbar
-      $j(".nav a").on('click', function(event){
-      
-        // Prevent default anchor click behavior
-        event.preventDefault();
-      
-        // Store hash (#)
-        var hash = this.hash;
-      
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area (the speed of the animation)
-        $j('html, body').animate({
-          scrollTop: $j(hash).offset().top
-        }, 800, function(){
-      
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-        });
+      $j(document).ready(function () {
+          $j(document).on("scroll", onScroll);
+          
+          //smoothscroll
+          $j('a[href^="#"]').on('click', function (e) {
+              e.preventDefault();
+              $j(document).off("scroll");
+              
+              $j('a').each(function () {
+                  $j(this).removeClass('active');
+              })
+              $j(this).addClass('active');
+            
+              var target = this.hash,
+                  menu = target;
+              $target = $j(target);
+              $j('html, body').stop().animate({
+                  'scrollTop': $target.offset().top+2
+              }, 500, 'swing', function () {
+                  window.location.hash = $target;
+                  $j(document).on("scroll", onScroll);
+              });
+          });
       });
+      
+      function onScroll(event){
+          var scrollPos = $j(document).scrollTop();
+          $j('.nav a').each(function () {
+              var currLink = $j(this);
+              var refElement = $j(currLink.attr("href"));
+              if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                  $j('#menu-center ul li a').removeClass("active");
+                  currLink.addClass("active");
+              }
+              else{
+                  currLink.removeClass("active");
+              }
+          });
+      }
+
+    
 
     </script>
     {% include analytics.html %}
