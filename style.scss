@@ -267,7 +267,7 @@ nav {
           border-bottom: 2px solid $blue;
         }
 
-        &.active:not(.avatar) {
+        &.active:not(.avatar), &:active:not(.avatar) {
           background-color: $blue;
           color: $lightestBlue;
           -moz-box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
