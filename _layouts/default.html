@@ -234,6 +234,10 @@
       var $j = jQuery.noConflict();
 
       $j('body').scrollspy({ target: '#navigation' });
+      
+      $j('body').smoothScroll({
+        delegateSelector: 'ul.nav a'
+      });
 
     </script>
     {% include analytics.html %}
