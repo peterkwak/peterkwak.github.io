@@ -237,7 +237,7 @@
           $j(document).on("scroll", onScroll);
           
           //smoothscroll
-          $j('a[href^="#"]').on('click', function (e) {
+          $j('.nav a[href^="#"]').on('click', function (e) {
               e.preventDefault();
               $j(document).off("scroll");
               
@@ -264,7 +264,7 @@
               var currLink = $j(this);
               var refElement = $j(currLink.attr("href"));
               if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                  $j('#menu-center ul li a').removeClass("active");
+                  $j('.nav a').removeClass("active");
                   currLink.addClass("active");
               }
               else{
