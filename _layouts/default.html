@@ -63,6 +63,13 @@
             <h1>{{ site.name }}</h1>
             <h2>{{ site.description }}</h2>
           </div>  
+          <div class="arrow-container">
+            <div class="animated slideInDown">
+              <a href="#work">
+                <div class="arrow"></div>
+              </a>
+            </div>
+          </div>
       </section>
       
       
@@ -71,16 +78,40 @@
           
           <div class="row">
             <div class="col-md-4">
-              <h3>MyFonts</h3>
-              <p>Responsive Design, HTML5, CSS3, jQuery, Backbone.js, Smarty PHP</p>
+              
+              <figure class="card">
+               
+                  <a target="_blank" href="http://www.myfonts.com"><img src="/images/myfonts_logo_3430.gif"/></a>
+                
+                <figcaption>
+                  <h3><a target="_blank"  href="http://www.myfonts.com">MyFonts</a></h3>
+                  <p>Responsive Design, HTML5, CSS3, jQuery, Backbone.js, Smarty PHP</p>
+                </figcaption>
+              </figure>
+
             </div>
             <div class="col-md-4">
-              <h3>MASS EDMC</h3>
-              <p>WordPress, HTML5, CSS3, jQuery, PHP</p>
+              <figure class="card">
+               
+                  <a target="_blank" href="http://www.massedmc.com"><img src="/images/massedmc-logo.png"/></a>
+                
+                <figcaption>
+                   <h3><a target="_blank"  href="http://www.massedmc.com">MASS EDMC</a></h3>
+                   <p>WordPress, HTML5, CSS3, jQuery, PHP</p>
+                </figcaption>
+              </figure>
             </div>
             <div class="col-md-4">
-              <h3>LiveBlog</h3>
-              <p>ASP.NET MVC3, jQuery, Razor templating engine</p>
+              <figure class="card">
+                <a target="_blank" href="https://github.com/peterkwak/LiveBlog">
+                  <img src="/images/scribblelive-logo.png"/>
+                </a>
+                <figcaption>
+                  <h3><a target="_blank"  href="https://github.com/peterkwak/LiveBlog">LiveBlog (clone of ScribbleLive chat)</a></h3>
+                  <p>ASP.NET MVC3, jQuery, Razor templating engine</p>
+                </figcaption>
+              </figure>
+              
             </div>
           </div>
       
@@ -89,7 +120,7 @@
       <section id="resume">
         <div class="container">
           <div class="row">
-            <div class="col-md-12 headline wow bounceInDown animated">
+            <div class="col-md-12 headline">
               <h2>Resume</h2>
               <p>My experience and education.</p>
             </div>
@@ -100,11 +131,11 @@
 
           <div class="row resume-items">
 
-            <div class="col-md-3 wow bounceInLeft animated">
+            <div class="col-md-3">
               <h3>Experience</h3>
             </div>
 
-            <div class="col-md-6 col-sm-8 resume-item wow bounceInUp animated">
+            <div class="col-md-6 col-sm-8 resume-item">
               <h4>Front-end Developer</h4>
               
               <ul>
@@ -116,13 +147,13 @@
               <hr class="hidden-xs">
             </div>
 
-            <div class="col-md-3 col-sm-4 resume-place wow bounceInRight animated">
+            <div class="col-md-3 col-sm-4 resume-place">
               <h4><i class="fa fa-suitcase"></i>MyFonts</h4>
               <i class="fa fa-calendar"></i> 2014 - Current
               <hr class="visible-xs">
             </div>
 
-            <div class="col-md-6 col-md-offset-3 col-sm-8 resume-item wow bounceInUp animated" >
+            <div class="col-md-6 col-md-offset-3 col-sm-8 resume-item" >
               <h4>Associate Engineer</h4>
               <ul>
                 <li>
@@ -132,13 +163,13 @@
               <hr class="hidden-xs">
             </div>
 
-            <div class="col-md-3 col-sm-4 resume-place wow bounceInRight animated">
+            <div class="col-md-3 col-sm-4 resume-place">
               <h4><i class="fa fa-suitcase"></i>BlueMetal Architects</h4>
               <i class="fa fa-calendar"></i> 2014 - 2014
               <hr class="visible-xs">
             </div>
 
-             <div class="col-md-6 col-md-offset-3 col-sm-8 resume-item wow bounceInUp animated" >
+             <div class="col-md-6 col-md-offset-3 col-sm-8 resume-item" >
               <h4>Associate Consultant</h4>
               <ul>
                 <li>Developed SharePoint Intranets using custom web parts and scripts</li>
@@ -149,13 +180,13 @@
               <hr class="hidden-xs">
             </div>
 
-             <div class="col-md-3 col-sm-4 resume-place wow bounceInRight animated">
+             <div class="col-md-3 col-sm-4 resume-place">
               <h4><i class="fa fa-suitcase"></i>Jornata</h4>
               <i class="fa fa-calendar"></i> 2013 - 2014
               <hr class="visible-xs">
             </div>
 
-            <div class="col-md-6 col-md-offset-3 col-sm-8 resume-item wow bounceInUp animated" >
+            <div class="col-md-6 col-md-offset-3 col-sm-8 resume-item">
               <h4>Web Designer/Developer</h4>
               <ul>
                 <li>Managed multitude of responsibilities including design, custom WordPress development, SEO, migration, administration, and maintenance</li>
@@ -166,7 +197,7 @@
               <hr class="hidden-xs">
             </div>
 
-             <div class="col-md-3 col-sm-4 resume-place wow bounceInRight animated">
+             <div class="col-md-3 col-sm-4 resume-place">
               <h4><i class="fa fa-suitcase"></i>Massachusetts Electronic Dance Community</h4>
               <i class="fa fa-calendar"></i> 2013 - 2016
               <hr class="visible-xs">
@@ -176,17 +207,17 @@
 
            <div class="row resume-items">
 
-            <div class="col-md-3 wow bounceInLeft animated">
+            <div class="col-md-3 ">
               <h3>Education</h3>
             </div>
 
-            <div class="col-md-6 col-sm-8 resume-item wow bounceInUp animated">
+            <div class="col-md-6 col-sm-8 resume-item">
               <h4>Management Information Systems</h4>
               <p>Related courses: C++ Programming, Java Programming, Database Management, Information Systems Analysis, Object Oriented System Design, Enterprise Resource Management</p>
               <hr class="hidden-xs">
             </div>
 
-            <div class="col-md-3 col-sm-4 resume-place wow bounceInRight animated">
+            <div class="col-md-3 col-sm-4 resume-place">
               <h4><i class="fa fa-suitcase"></i>Pennsylvania State University</h4>
               <i class="fa fa-calendar"></i>
               <hr class="visible-xs">
@@ -195,8 +226,8 @@
           </div><!-- .row -->
           <div class="row">
 
-            <div class="col-md-6 col-md-offset-3 wow bounceInUp animated">
-              <a href="#" class="btn btn-default btn-custom-2"><i class="fa fa-cloud-download icon-before"></i> Download CV</a>
+            <div class="col-md-6 col-md-offset-3">
+              <a href="/files/Resume_PeterKwak.pdf" class="btn btn-default btn-custom-2" download><i class="fa fa-cloud-download icon-before"></i> Download CV</a>
             </div>
 
           </div><!-- .row -->
@@ -206,11 +237,24 @@
       
       <section id="about">
         <h3>About myself</h3>
-        <p>I'm a front end developer </p>
+        <p>I'm a front end developer and a visual designer who believes that creating modern and responsive user interfaces is a skill that can always be improved.</p>
+        <p>The most important part of developing a UI is having empathy for a user and being able to step into their shoes.</p>
+        
       </section>
       
       <section id="contact">
         <h3>Get in contact </h3>
+
+        <form action="https://formspree.io/pk9190@gmail.com" method="POST">
+          <div class="col-md-12">
+          Your name: <input type="text" name="name"> 
+          Your e-mail: <input type="email" name="_replyto"><br><br>
+          <textarea name="textarea" rows="6" cols="50"></textarea><br>
+          <input type="submit" value="Send">
+          </div>
+          
+          </div>
+      </form>
       </section>
       
       <div class="wrapper-footer">
@@ -236,7 +280,7 @@
         $(document).on("scroll", onScroll);
         
         //smoothscroll
-        $('#navigation a[href^="#"]').on('click', function (e) {
+        $('#navigation a[href^="#"], #section-cover a[href^="#"]').on('click', function (e) {
             e.preventDefault();
             $(document).off("scroll");
             
