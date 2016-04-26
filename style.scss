@@ -391,12 +391,20 @@ nav {
   font-family: inherit;
   text-align: center;
 
+  @include mobile {
+    width: 100%;
+  }
+
   h1 {
       margin: 0;
       cursor: pointer;
       
       font-weight: 900;
       font-size: 64px;
+
+      @include mobile {
+        font-size: 48px;
+      }
   }
 
   h2 {
@@ -446,6 +454,10 @@ nav {
   top: 0;
   right: 0px;
   padding: 5px;
+
+  @include mobile {
+    display: none;
+  }
 }
 
 main {
