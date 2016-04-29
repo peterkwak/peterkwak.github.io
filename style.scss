@@ -238,10 +238,12 @@ nav {
 nav {
 
   .navbar-header {
+    background-color: $blue;
+   
     .navbar-toggle {
-      border-color: #ddd;
+      border-color: $blue;
       .icon-bar {
-        background-color: #888;
+        background-color: $lightestBlue;
       }
     }
   }
@@ -255,6 +257,16 @@ nav {
 
     font-family: $montserrat;
     font-size: 16px;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    .navbar-nav {
+      @include mobile {
+        margin: 0;
+      }
+    }
 
     .nav {
       li {
@@ -355,6 +367,10 @@ nav {
       li {
         padding: 0px 15px;
 
+        @include mobile {
+          padding: 0;
+        }
+
         &:not(.avatar):not(.active) {
           &:focus, &:hover {
             background-color: $blue;
@@ -363,6 +379,11 @@ nav {
             -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .5);
             box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 
+            @include mobile {
+              background-color: $lightestBlue;
+              color: $blue;
+              box-shadow: none;
+            }
             a { color: inherit; }
           }
 
@@ -372,6 +393,19 @@ nav {
             }
           }
         } 
+
+        &.active:not(.avatar) {
+          @include mobile {
+            background-color: $lightestBlue;
+            color: $blue;
+            box-shadow: none;
+
+            a:hover {
+              color: $blue;
+            }
+          }
+
+        }
       }
     }
 
@@ -439,6 +473,10 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   bottom: 80px;
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .arrow {
